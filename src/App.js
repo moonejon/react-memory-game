@@ -14,16 +14,26 @@ import './App.css';
         array[j] = temp;
     }
     return array;
-}
+ }
+
+ var selectedCards = [];
 
 class App extends Component {
+    
+
     state = {
         pokemon,
-        // selectedPokemon
+        selectedCards
+    };
+
+    selectCard = id => {
+        selectedCards.includes(id) ? selectedCards = [] : selectedCards.push(id);
+        this.setState({ selectedCards });
+        console.log(this.state.selectedCards);
     };
 
     render() {
-      const shuffledCards = shuffleArray(this.state.pokemon)
+        const shuffledCards = shuffleArray(this.state.pokemon);
         return (
             <Wrapper>
                 <Title>
@@ -35,7 +45,7 @@ class App extends Component {
                 </Title>
                 {shuffledCards.map(pokemon => (
                     <MemoryCardFront
-                        selectPokemon={this.selectPokemon}
+                        selectCard={this.selectCard}
                         id={pokemon.id}
                         h
                         key={pokemon.id}
