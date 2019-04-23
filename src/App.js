@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import MemoryCardFront from "./components/MemoryCardFront";
 import Wrapper from "./components/Wrapper";
-import Title from "./components/Title"
-import pokemon from "./pokemon.json"
+import Title from "./components/Title";
+import ScoreBoard from "./components/ScoreBoard";
+import pokemon from "./pokemon.json";
 import './App.css';
 
  const shuffleArray = array => {
@@ -39,7 +40,8 @@ class App extends Component {
                 <Title>
                     {
                         <p>
-                            <img src="https://vignette.wikia.nocookie.net/pokemon/images/9/9f/Pok%C3%A9monLogo%28Eng%29.png/revision/latest?cb=20090304221051" />
+                            <img className="logo" alt="Pokemon Logo" src="https://vignette.wikia.nocookie.net/pokemon/images/9/9f/Pok%C3%A9monLogo%28Eng%29.png/revision/latest?cb=20090304221051" />
+                            <div className="scoreboard">Score: {this.state.selectedCards.length}</div>
                         </p>
                     }
                 </Title>
