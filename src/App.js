@@ -28,7 +28,6 @@ class App extends Component {
     selectCard = id => {
         selectedCards.includes(id) ? selectedCards = [] : selectedCards.push(id);
         this.setState({ selectedCards });
-        console.log(this.state.selectedCards);
     };
 
     render() {
