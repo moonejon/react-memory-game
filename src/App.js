@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import MemoryCardFront from "./components/MemoryCardFront";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
-import ScoreBoard from "./components/ScoreBoard";
 import pokemon from "./pokemon.json";
 import './App.css';
 
@@ -21,7 +20,6 @@ import './App.css';
 
 class App extends Component {
     
-
     state = {
         pokemon,
         selectedCards
